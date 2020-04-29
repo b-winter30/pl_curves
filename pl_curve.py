@@ -59,7 +59,7 @@ def calculate_gini(data):
     # samples!)
 
     # don't attempt to compute an empty list, just return NaN instead
-    if data.size == 0:
+    if len(data) == 0:
         return math.nan
 
     # Mean absolute difference
