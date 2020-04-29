@@ -25,11 +25,11 @@ def test_gini_single():
 
 def test_gini_four():
     '''test calculating a gini coefficient with four different items'''
-    gini = calculate_gini(pd.Series([1.0, 2.0, 3.0, 4.0]))
+    gini = calculate_gini([1.0, 2.0, 3.0, 4.0])
     assert gini == 0.25
 
 
 def test_gini_four_even():
     '''test calculating a gini coefficient with four identical items'''
-    gini = calculate_gini(pd.Series([1.0, 1.0, 1.0, 1.0]))
+    gini = calculate_gini([1.0, 1.0, 1.0, 1.0])
     assert gini == 0.0
