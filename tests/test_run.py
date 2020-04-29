@@ -3,6 +3,9 @@ from pl_curve import run
 import pandas
 import os
 
+def test_if_file_exists():
+    if path.exists("test.tsv") && path.exists("test.png"):
+        return true
 
 def test_run():
 
