@@ -15,19 +15,11 @@ def test_run():
     f.write("218\t0.5\t0.7\n")
     f.close()
 
-    # delete test.png if it already exists
-    try:
-        os.remove("test.tsv")
-    # catch the error if file doesn't exist
-    except FileNotFoundError as error:
-        pass
+    # delete test.png, we know it exists because of the function test_if_file_exists()
+    os.remove("test.tsv")
 
-    # delete test.png if it already exists
-    try:
-        os.remove("test.png")
-    # catch the error if file doesn't exist
-    except FileNotFoundError as error:
-        pass
+    # delete test.png, we know it exists because of the function test_if_file_exists()
+    os.remove("test.png")
 
     run("test-input.tsv", "test.png", "test.tsv")
     assert os.path.isfile("test.tsv") is True
